@@ -56,7 +56,7 @@ public class ClientController {
         //qui creaiamo una connessione al server
         //il server riceve il nome del client
         //il server verifica se l'utente esiste
-        //il server 
+        //il server legge dal file xml le mail dell'utente
         //il server restituisce un oggetto contente le mail dell'utente
         //istanza nuovo client
         model = new Client(mail);
