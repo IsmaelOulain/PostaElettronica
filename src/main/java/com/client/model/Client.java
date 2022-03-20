@@ -99,7 +99,7 @@ public class Client {
                 // get utente id
                 String id = element.getAttribute("id");
                 if (node.getNodeType() == Node.ELEMENT_NODE && id.equals(emailAddress.getValue())) {
-                    NodeList mails = doc.getElementsByTagName("Mail");
+                    NodeList mails = element.getElementsByTagName("Mail");
                     for (int c = 0; c < mails.getLength(); c++) {
                         Node email = mails.item(c);
                         Element posta = (Element) email;
