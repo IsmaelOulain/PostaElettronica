@@ -113,8 +113,6 @@ public class Client {
                     }
                 }
             }
-
-
         } catch (ParserConfigurationException | SAXException | IOException e) {
             e.printStackTrace();
         }

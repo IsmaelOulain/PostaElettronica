@@ -53,6 +53,11 @@ public class ClientController {
     @FXML
     public void initialize(String mail){
         if (this.model != null) throw new IllegalStateException("Model can only be initialized once");
+        //qui creaiamo una connessione al server
+        //il server riceve il nome del client
+        //il server verifica se l'utente esiste
+        //il server 
+        //il server restituisce un oggetto contente le mail dell'utente
         //istanza nuovo client
         model = new Client(mail);
         model.generateRandomEmails(10);
