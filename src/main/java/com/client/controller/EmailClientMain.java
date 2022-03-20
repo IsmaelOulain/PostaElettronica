@@ -19,7 +19,7 @@ public class EmailClientMain extends Application {
     public void start(Stage stage) throws IOException {
         URL clientUrl = EmailClientMain.class.getResource("login.fxml");
         FXMLLoader fxmlLoader = new FXMLLoader(clientUrl);
-        Scene scene = new Scene(fxmlLoader.load(), 250, 150);
+        Scene scene = new Scene(fxmlLoader.load(), 250, 100);
         stage.setTitle("Email client");
         stage.setScene(scene);
         stage.show();
