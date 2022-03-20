@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<PostaElettronica>
+    <Utente id="ismael">
+        <Mail dataInvio="19/03/2022 21:18">
+            <MailFrom>ismael@gmail.com</MailFrom>
+            <MailTo>ciccio@gmail.com,ale@gmail.com,pippo@gmail.com</MailTo>
+            <MailOggetto>ProvaMailOggetto</MailOggetto>
+            <MailMsg>Ciao questa e' una mial di test</MailMsg>
+        </Mail>
+        <Mail dataInvio="20/03/2022 21:18">
+            <MailFrom>ismael@gmail.com</MailFrom>
+            <MailTo>ciccio@gmail.com,ale@gmail.com,pippo@gmail.com</MailTo>
+            <MailOggetto>Secondo giorno</MailOggetto>
+            <MailMsg>secondo giorno di prova</MailMsg>
+        </Mail>
+    </Utente>
+</PostaElettronica>
