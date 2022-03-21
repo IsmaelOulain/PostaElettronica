@@ -1,4 +1,4 @@
-module com.prog3.prog3 {
+module com {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -15,4 +15,7 @@ module com.prog3.prog3 {
 
     opens com.client.model to javafx.fxml;
     exports com.client.model;
+
+    opens com.server.controller to javafx.fxml;
+    exports com.server.controller;
 }
