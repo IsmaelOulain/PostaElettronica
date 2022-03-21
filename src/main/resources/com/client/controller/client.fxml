@@ -1,22 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.StackPane?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="722.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.controller.ClientController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.controller.ClientController">
    <center>
       <SplitPane dividerPositions="0.36785119378123265" prefHeight="638.0" prefWidth="595.0" BorderPane.alignment="CENTER">
          <items>
@@ -29,7 +18,7 @@
                               <Image url="@../images/icon.png" />
                            </image>
                         </ImageView>
-                        <Label fx:id="lblUsername" prefHeight="54.0" prefWidth="215.0" text="Label">
+                        <Label fx:id="lblUsername" prefHeight="54.0" prefWidth="215.0" text="Mailbox">
                            <HBox.margin>
                               <Insets left="20.0" />
                            </HBox.margin>
@@ -82,10 +71,11 @@
                         <TextArea fx:id="txtEmailContent" editable="false" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
                      </center>
                      <bottom>
-                        <GridPane BorderPane.alignment="CENTER">
+                        <GridPane prefHeight="30.0" prefWidth="490.0" BorderPane.alignment="CENTER">
                           <columnConstraints>
                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -94,11 +84,12 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#onDeleteButtonClick" text="Elimina" GridPane.columnIndex="3" />
+                              <Button fx:id="btnDelete" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#onDeleteButtonClick" text="Elimina" GridPane.columnIndex="3" />
                               <Button fx:id="btnRispondi" mnemonicParsing="false" text="Rispondi" GridPane.columnIndex="1" />
-                              <Button fx:id="btnInoltra" mnemonicParsing="false" prefHeight="30.0" prefWidth="59.0" text="Inoltra" />
-                              <Button fx:id="btnRispondiAll" mnemonicParsing="false" prefHeight="25.0" prefWidth="107.0" text="Rispondi tutti" GridPane.columnIndex="2" />
+                              <Button fx:id="btnInoltra" mnemonicParsing="false" prefHeight="30.0" prefWidth="58.0" text="Inoltra" />
+                              <Button fx:id="btnRispondiAll" mnemonicParsing="false" prefHeight="26.0" prefWidth="105.0" text="Rispondi tutti" GridPane.columnIndex="2" />
                               <Button mnemonicParsing="false" text="Invia" GridPane.columnIndex="4" />
+                              <Button fx:id="logout" contentDisplay="CENTER" mnemonicParsing="false" onAction="#userLogout" prefHeight="52.0" prefWidth="79.0" text="Logout" GridPane.columnIndex="5" />
                            </children>
                         </GridPane>
                      </bottom>

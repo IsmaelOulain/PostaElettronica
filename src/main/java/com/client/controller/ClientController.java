@@ -3,11 +3,13 @@ package com.client.controller;
 
 import com.client.model.Client;
 import com.client.model.Email;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 
+import java.io.IOException;
 import java.util.Arrays;
 
 /**
@@ -41,6 +43,7 @@ public class ClientController {
 
     @FXML
     Button btnInoltra;
+
 
 
     @FXML
@@ -126,9 +129,13 @@ public class ClientController {
             txtEmailContent.setEditable(false);
         }
     }
-
-
-
+    /**
+     * Eseguo il logout
+     */
+    public void userLogout(ActionEvent event) throws IOException {
+        EmailClientMain m = new EmailClientMain();
+        m.changeScene("login.fxml");
+    }
 
 
 }
