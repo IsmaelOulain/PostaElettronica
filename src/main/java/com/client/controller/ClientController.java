@@ -44,7 +44,9 @@ public class ClientController {
     @FXML
     Button btnInoltra;
 
-
+    @FXML
+    Button logout;
+    
 
     @FXML
     private ListView<Email> lstEmails;

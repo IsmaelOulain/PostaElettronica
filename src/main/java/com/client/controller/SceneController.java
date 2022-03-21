@@ -21,8 +21,7 @@ public class SceneController {
     @FXML
     TextField Email;
 
-    @FXML
-    private Button logout;
+
 
     /*public void switchToScene1(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
