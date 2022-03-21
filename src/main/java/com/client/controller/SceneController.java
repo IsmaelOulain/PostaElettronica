@@ -38,7 +38,7 @@ public class SceneController {
         ClientController controller = loader.getController();
         controller.initialize(email);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root,900,900);
+        scene = new Scene(root);
         stage.setScene(scene);
         stage.centerOnScreen();
         stage.show();
