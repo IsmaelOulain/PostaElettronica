@@ -31,6 +31,6 @@
       </GridPane>
    </bottom>
    <center>
-      <TextArea fx:id="logArea" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <TextArea fx:id="logArea" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" editable="false"/>
    </center>
 </BorderPane>

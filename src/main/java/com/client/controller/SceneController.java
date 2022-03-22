@@ -21,14 +21,14 @@ public class SceneController {
     @FXML
     TextField Email;
     
-    /*public void switchToScene1(ActionEvent event) throws IOException {
+    public void switchToScene1(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root, 300, 300);
+        scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
         stage.centerOnScreen();
-    }*/ //Isma sta roba non serve per ora e l'ho nascosta per comodità
+    }
 
     public void switchToClient(ActionEvent event) throws IOException {
         String email = Email.getText();

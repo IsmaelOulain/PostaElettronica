@@ -135,8 +135,8 @@ public class ClientController {
      * Eseguo il logout
      */
     public void userLogout(ActionEvent event) throws IOException {
-        EmailClientMain m = new EmailClientMain();
-        m.changeScene("login.fxml");
+        SceneController m = new SceneController();
+        m.switchToScene1(event);
     }
 
 

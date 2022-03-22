@@ -16,6 +16,5 @@ module com {
     opens com.client.model to javafx.fxml;
     exports com.client.model;
 
-    opens com.server.controller to javafx.fxml;
-    exports com.server.controller;
+
 }

@@ -1,6 +1,5 @@
 package com.server.controller;
 
-import com.client.controller.EmailClientMain;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -11,10 +10,11 @@ import java.net.URL;
 public class ServerApp extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        URL clientUrl = ServerApp.class.getResource("server.fxml");
-        System.out.println(getClass().getResource("com.server/controller/server.fxml"));
+        System.out.println(getClass().getResource("server.fxml"));
+        URL clientUrl = getClass().getResource("server.fxml");
+
         FXMLLoader fxmlLoader = new FXMLLoader(clientUrl);
-        Scene scene = new Scene(fxmlLoader.load(), 250, 100);
+        Scene scene = new Scene(fxmlLoader.load(), 700, 400);
         stage.setTitle("Server App");
         stage.setScene(scene);
         stage.show();

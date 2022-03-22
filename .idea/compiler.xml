@@ -6,11 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="PostaElettronica" />
+        <module name="Prog3" />
+        <module name="server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="PostaElettronica" target="17" />
+      <module name="Prog3" target="17" />
+      <module name="server" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
