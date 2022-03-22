@@ -1,4 +1,4 @@
-module com.server.server {
+module com.server {
     requires javafx.controls;
     requires javafx.fxml;
 

@@ -1,4 +1,4 @@
-module com {
+module com.client {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
