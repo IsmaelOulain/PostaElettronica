@@ -1,5 +1,6 @@
 package com.client.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -8,7 +9,7 @@ import java.util.List;
  * Rappresenta una mail
  */
 
-public class Email {
+public class Email implements Serializable {
 
     private String sender;
     private List<String> receivers;

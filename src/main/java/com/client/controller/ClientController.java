@@ -9,8 +9,13 @@ import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 
-import java.io.IOException;
+import java.io.*;
+import java.net.InetAddress;
+import java.net.Socket;
+import java.time.format.SignStyle;
 import java.util.Arrays;
+import java.util.Date;
+import java.util.Scanner;
 
 /**
  * Classe Controller 
@@ -56,7 +61,7 @@ public class ClientController {
     private Email emptyEmail;
 
     @FXML
-    public void initialize(String mail){
+    public void initialize(Client model){
         if (this.model != null) throw new IllegalStateException("Model can only be initialized once");
         //qui creaiamo una connessione al server
         //il server riceve il nome del client
@@ -64,21 +69,29 @@ public class ClientController {
         //il server legge dal file xml le mail dell'utente
         //il server restituisce un oggetto contente le mail dell'utente
         //istanza nuovo client
-        model = new Client(mail);
-        model.generateRandomEmails(10);
 
-        selectedEmail = null;
+           this.model=model;
 
-        //binding tra lstEmails e inboxProperty
-        lstEmails.itemsProperty().bind(model.inboxProperty());
-        lstEmails.setOnMouseClicked(this::showSelectedEmail);
-        lblUsername.textProperty().bind(model.emailAddressProperty());
+                //model.generateRandomEmails(10);
 
-        emptyEmail = new Email("", Arrays.asList(""), "", "","");
-        if(lstEmails.getItems().isEmpty()){
-            updateDetailView(emptyEmail);
-        }else  updateDetailView(lstEmails.getItems().get(0));
-    }
+                selectedEmail = null;
+                if(model!=null){
+                    //binding tra lstEmails e inboxProperty
+                    lstEmails.itemsProperty().bind(model.inboxProperty());
+                    lstEmails.setOnMouseClicked(ClientController.this::showSelectedEmail);
+                    lblUsername.textProperty().bind(model.emailAddressProperty());
+                    emptyEmail = new Email("", Arrays.asList(""), "", "","");
+                    if(lstEmails.getItems().isEmpty()){
+                        updateDetailView(emptyEmail);
+                    }else  updateDetailView(lstEmails.getItems().get(0));
+                }else System.out.println("Ricevuto model nullo");
+
+
+
+            }
+
+
+
 
     /**
      * Elimina la mail selezionata

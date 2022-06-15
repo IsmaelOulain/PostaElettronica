@@ -9,6 +9,7 @@ module com.client {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires com.server;
 
     opens com.client.controller to javafx.fxml;
     exports com.client.controller;

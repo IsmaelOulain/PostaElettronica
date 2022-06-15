@@ -1,5 +1,6 @@
 package com.client.controller;
 
+import com.client.model.Client;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,6 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -36,7 +38,9 @@ public class SceneController {
         root = loader.load();
 
         ClientController controller = loader.getController();
-        controller.initialize(email);
+        ClientConn conn = new ClientConn(email);
+        Client model = conn.communicate("localhost",4445);
+        controller.initialize(model);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

@@ -10,6 +10,7 @@ import java.net.URL;
 public class ServerApp extends Application {
     @Override
     public void start(Stage stage) throws Exception {
+
         System.out.println(getClass().getResource("server.fxml"));
         URL clientUrl = getClass().getResource("server.fxml");
 

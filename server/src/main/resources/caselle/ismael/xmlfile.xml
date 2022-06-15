@@ -24,7 +24,7 @@
         <Mail dataInvio="20/03/2022 21:18">
             <MailFrom>andrea@gmail.com</MailFrom>
             <MailTo>ciccio@gmail.com,ale@gmail.com,pippo@gmail.com</MailTo>
-            <MailOggetto>Secondo giorno</MailOggetto>
+            <MailOggetto>Mail di andrea</MailOggetto>
             <MailMsg>secondo giorno di prova</MailMsg>
         </Mail>
     </Utente>
